@@ -1,0 +1,123 @@
+:root {
+    font-size: 1.2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: auto;
+    height: 100vh;
+    background-color: black;
+    background: linear-gradient(to top right, rgba(7, 0, 0, 0.596)), rgb(0, 0, 0);
+}
+
+#title {
+    color: white;
+}
+
+h1 {
+    font-size: 1.2rem;
+}
+
+
+.container {
+    height: 95%;
+    width: 96%;
+    margin-left: 2%;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+}
+
+
+
+.left-section {
+    width: 50%;
+    background: linear-gradient(rgb(241, 0, 0), rgb(194, 97, 113), rgb(54, 198, 255), rgba(255, 255, 0, 0.699));
+    background-size: 50% 100%;
+    animation: gradient 5s ease-in infinite;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.right-section {
+    background-color: #fff;
+    width: 50%;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#result {
+    width: 100%;
+    height: 100%;
+}
+
+.html-code {
+    width: 99%;
+    height: 32%;
+    padding: 1%;
+    margin-top: 1%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    position: relative;
+    resize: none;
+    border-color: white;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: white;
+    border: none;
+    background-color: rgb(255, 73, 73);
+}
+
+.css-code {
+    width: 99%;
+    height: 32%;
+    padding: 1%;
+    margin-top: 1%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    position: relative;
+    resize: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: firebrick;
+    background-color: rgb(49, 195, 253);
+}
+
+.js-code {
+    width: 99%;
+    height: 32%;
+    padding: 1%;
+    margin-top: 1%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    border-radius: 5px;
+    position: relative;
+    resize: none;
+    font-size: 1.1rem;
+    color: blue;
+    font-weight: 600;
+    background-color: rgb(252, 255, 56);
+}

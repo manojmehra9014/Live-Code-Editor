@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Code Editor</title>
+  <link rel="stylesheet" href="style.css" class="css" />
+  <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/addon/hint/show-hint.min.css">
+  <script src="https://codemirror.net/lib/codemirror.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/emmet-core/2.0.2/emmet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/emmet-core/2.0.2/emmet-codemirror-plugin.js"></script>
+
+</head>
+
+<body>
+  <center>
+    <h1 id="title">
+      Manoj Mehra - The Extream Web development Code Editor - Try it Once 😊👍
+    </h1>
+  </center>
+  <div class="container">
+    <section class="left-section">
+      <textarea class="html-code" contenteditable="true" id="editor" spellcheck="false"
+        placeholder="HTML Code"></textarea>
+
+      <textarea class="css-code" spellcheck="false" placeholder="CSS Code"></textarea>
+
+      <textarea class="js-code" spellcheck="false" placeholder="JS Code"></textarea>
+    </section>
+
+    <section class="right-section">
+      <center>
+        <h1>Live Server preview</h1>
+      </center>
+      <iframe id="result"></iframe>
+    </section>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/addon/hint/show-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/addon/hint/html-hint.min.js"></script>
+
+  <script src="script.js">
+
+    const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+      lineNumbers: true,
+      mode: "htmlmixed",
+      extraKeys: {
+        "Tab": (cm) => cm.execCommand("emmetExpandAbbreviation"),
+        "Ctrl-Space": "autocomplete"
+      }
+    });
+    CodeMirror.emmetCodeMirror(editor, { "Tab": "emmetExpandAbbreviation" });
+
+  </script>
+  <!--Js external File -->
+</body>
+
+</html>
